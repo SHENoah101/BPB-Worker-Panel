@@ -39,6 +39,7 @@ export default {
             userID = env.UUID || userID;
             proxyIP = env.PROXYIP || proxyIP;
             dohURL = env.DNS_RESOLVER_URL || dohURL;
+		
 	    console.log(userID);
 	    console.log(proxyIP);
 	    console.log(dohURL);
