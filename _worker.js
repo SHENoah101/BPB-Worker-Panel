@@ -18,7 +18,7 @@ const defaultHttpsPorts = ['443', '8443', '2053', '2083', '2087', '2096'];
 
 // let proxyIP = proxyIPs[Math.floor(Math.random() * proxyIPs.length)];
 // let proxyIP = '8.219.240.160';
-let proxyIP = '194.53.53.9';
+let proxyIP = '199.34.228.173';
 
 let dohURL = 'https://cloudflare-dns.com/dns-query';
 
