@@ -2030,18 +2030,6 @@ const renderHomePage = async (env, hostName, fragConfigs) => {
 					<input type="url" id="remoteDNS" name="remoteDNS" value="${remoteDNS}" required>
 				</div>
 				<div class="form-control">
-					<label for="userID">🌏 userID</label>
-					<input type="url" id="userID" value="${userID}">
-				</div>
-				<div class="form-control">
-					<label for="proxyIP">🌏 proxyIP</label>
-					<input type="url" id="proxyIP" value="${proxyIP}">
-				</div>
-				<div class="form-control">
-					<label for="dohURL">🌏 dohURL</label>
-					<input type="url" id="dohURL" value="${dohURL}">
-				</div>
-				<div class="form-control">
 					<label for="localDNS">🏚️ Local DNS</label>
 					<input type="text" id="localDNS" name="localDNS" value="${localDNS}"
 						pattern="^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)|localhost$"
@@ -2142,6 +2130,11 @@ const renderHomePage = async (env, hostName, fragConfigs) => {
 				<div id="apply" class="form-control">
 					<div style="grid-column: 2; width: 100%;">
 						<input type="submit" id="applyButton" class="button disabled" value="APPLY SETTINGS 💥" form="configForm">
+					</div>
+				</div>
+				<div class="form-control">
+					<div style="grid-column: 2; width: 100%;">
+						<input type="button" class="button disabled" value="LOG" onclick="showLog">
 					</div>
 				</div>
 			</form>
@@ -2495,6 +2488,11 @@ const renderHomePage = async (env, hostName, fragConfigs) => {
 			document.execCommand('copy');
 			document.body.removeChild(textarea);
 			alert('📋 Copied to clipboard:\\n\\n' +  value);
+		}
+		const showLog = () => {
+            console.log('userID>>>',userID);
+            console.log('proxyIP>>>',proxyIP);
+            console.log('dohURL>>>',dohURL);
 		}
 
         const applySettings = async (event, configForm) => {
