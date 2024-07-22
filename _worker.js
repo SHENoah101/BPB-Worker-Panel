@@ -2134,7 +2134,7 @@ const renderHomePage = async (env, hostName, fragConfigs) => {
 				</div>
 				<div class="form-control">
 					<div style="grid-column: 2; width: 100%;">
-						<input type="button" class="button disabled" value="LOG" onclick="showLog">
+						<input type="button" class="button" value="LOG" onclick="showLog">
 					</div>
 				</div>
 			</form>
