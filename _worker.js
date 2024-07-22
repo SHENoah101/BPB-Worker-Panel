@@ -39,10 +39,9 @@ export default {
             userID = env.UUID || userID;
             proxyIP = env.PROXYIP || proxyIP;
             dohURL = env.DNS_RESOLVER_URL || dohURL;
-		
-	    console.log(userID);
-	    console.log(proxyIP);
-	    console.log(dohURL);
+		 alert(userID);
+		 alert(proxyIP);
+		 alert(dohURL);
             const upgradeHeader = request.headers.get('Upgrade');
             
             if (!upgradeHeader || upgradeHeader !== 'websocket') {
