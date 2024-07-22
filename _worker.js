@@ -17,7 +17,6 @@ const defaultHttpPorts = ['80', '8080', '2052', '2082', '2086', '2095', '8880'];
 const defaultHttpsPorts = ['443', '8443', '2053', '2083', '2087', '2096'];
 
 let proxyIP = proxyIPs[Math.floor(Math.random() * proxyIPs.length)];
-console.log('proxyIP>>>', proxyIP);
 
 let dohURL = 'https://cloudflare-dns.com/dns-query';
 
@@ -822,18 +821,18 @@ const generateRemark = (index, port) => {
     switch (index) {
         case 0:
         case 1:
-            remark = `💦 BPB${proxyIP} - Domain_${index + 1} : ${port}`;
+            remark = `💦 BPB-proxyIP=${proxyIP} - Domain_${index + 1} : ${port}`;
             break;
         case 2:
         case 3:
-            remark = `💦 BPB - IPv4_${index - 1} : ${port}`;
+            remark = `💦 BPB-proxyIP=${proxyIP} - IPv4_${index - 1} : ${port}`;
             break;
         case 4:
         case 5:
-            remark = `💦 BPB - IPv6_${index - 3} : ${port}`;
+            remark = `💦 BPB-proxyIP=${proxyIP} - IPv6_${index - 3} : ${port}`;
             break;
         default:
-            remark = `💦 BPB - Clean IP_${index - 5} : ${port}`;
+            remark = `💦 BPB-proxyIP=${proxyIP} - Clean IP_${index - 5} : ${port}`;
             break;
     }
 
