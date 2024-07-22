@@ -17,6 +17,8 @@ const defaultHttpPorts = ['80', '8080', '2052', '2082', '2086', '2095', '8880'];
 const defaultHttpsPorts = ['443', '8443', '2053', '2083', '2087', '2096'];
 
 let proxyIP = proxyIPs[Math.floor(Math.random() * proxyIPs.length)];
+console.log(proxyIP, '1');
+console.log(env, '2');
 
 let dohURL = 'https://cloudflare-dns.com/dns-query';
 
@@ -2132,11 +2134,6 @@ const renderHomePage = async (env, hostName, fragConfigs) => {
 						<input type="submit" id="applyButton" class="button disabled" value="APPLY SETTINGS 💥" form="configForm">
 					</div>
 				</div>
-				<div class="form-control">
-					<div style="grid-column: 2; width: 100%;">
-						<input type="button" class="button" value="LOG" onclick="showLog">
-					</div>
-				</div>
 			</form>
             <hr>            
 			<h2>NORMAL CONFIGS 🔗</h2>
@@ -2488,11 +2485,6 @@ const renderHomePage = async (env, hostName, fragConfigs) => {
 			document.execCommand('copy');
 			document.body.removeChild(textarea);
 			alert('📋 Copied to clipboard:\\n\\n' +  value);
-		}
-		const showLog = () => {
-            console.log('userID>>>',userID);
-            console.log('proxyIP>>>',proxyIP);
-            console.log('dohURL>>>',dohURL);
 		}
 
         const applySettings = async (event, configForm) => {
